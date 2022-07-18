@@ -5,6 +5,13 @@
 
 #include "nlohmann/json.hpp"
 #include "ConverterJSON.h"
+#include "config.h"
+
+namespace version {
+	int getVersion() {
+		return(PROJECT_VERSION);
+	}
+}
 
 std::vector<std::string> ConverterJSON::GetTextDocuments()
 {
@@ -17,6 +24,14 @@ std::vector<std::string> ConverterJSON::GetTextDocuments()
 
 	std::cout << "Starting " << json_data["config"]["name"] << std::endl;
 	if (json_data["config"].empty()) throw ConfigFileEmpty_Exception();
+	if (json_data["config"]["version"].empty()) throw ConfigFileVersionEmpty_Exception();
+	{
+		std::string parsed_version = "";
+		std::string version = json_data["config"]["version"];
+		for (auto simbol : version)
+			if(simbol != '.') parsed_version += simbol;
+		if (parsed_version != std::to_string(version::getVersion())) throw ConfigFileVersionIncorrect_Exception();
+	}
 
 	// preparing start packets of threads and text_docs
 	std::vector<std::string> text_docs;

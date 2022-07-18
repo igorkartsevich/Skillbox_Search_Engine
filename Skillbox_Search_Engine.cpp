@@ -19,6 +19,14 @@ int main()
 	{
 		std::cout << ex.what() << std::endl;
 	}
+	catch (const ConfigFileVersionEmpty_Exception& ex)
+	{
+		std::cout << ex.what() << std::endl;
+	}
+	catch (const ConfigFileVersionIncorrect_Exception& ex)
+	{
+		std::cout << ex.what() << std::endl;
+	}
 	catch (const RequestsFileEmpty_Exception& ex)
 	{
 		std::cout << ex.what() << std::endl;

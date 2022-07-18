@@ -17,6 +17,18 @@ public:
 		return "ERROR! Config file is missing.";
 	}
 };
+class ConfigFileVersionEmpty_Exception : public std::exception {
+public:
+	const char* what() const noexcept override {
+		return "ERROR! Config file version is empty.";
+	}
+};
+class ConfigFileVersionIncorrect_Exception : public std::exception {
+public:
+	const char* what() const noexcept override {
+		return "ERROR! Config file has incorrect file version.";
+	}
+};
 class RequestsFileEmpty_Exception : public std::exception {
 public:
 	const char* what() const noexcept override {
