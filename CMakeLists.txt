@@ -21,14 +21,20 @@ include(FetchContent)
 	)
 
 set(Headers
+	include/ConverterJSON.h
+	include/InvertedIndex.h
+	include/SearchServer.h
+)
+
+set(Sources
 	Src/ConverterJSON.cpp
 	Src/InvertedIndex.cpp
 	Src/SearchServer.cpp
 )
 
-add_library(Project_library ${Headers})
+add_library(Project_library ${Headers} ${Sources})
 
-add_executable (Skillbox_Search_Engine Skillbox_Search_Engine.cpp)
+add_executable (Skillbox_Search_Engine Skillbox_Search_Engine.cpp Skillbox_Search_Engine.h)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Skillbox_Search_Engine PROPERTY CXX_STANDARD 20)

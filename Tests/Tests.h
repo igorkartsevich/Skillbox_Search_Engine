@@ -1,6 +1,6 @@
 #pragma once
 
 #include "gtest/gtest.h"
-#include "../Src/InvertedIndex.h"
-#include "../Src/SearchServer.h"
-#include "../Src/ConverterJSON.h"
+#include "../include/ConverterJSON.h"
+#include "../include/SearchServer.h"
+#include "../include/ConverterJSON.h"

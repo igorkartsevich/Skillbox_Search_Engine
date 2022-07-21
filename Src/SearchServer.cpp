@@ -2,7 +2,7 @@
 #include <sstream>
 #include <string>
 
-#include "SearchServer.h"
+#include "../include/SearchServer.h"
 
 std::vector<std::vector<RelativeIndex>> SearchServer::Search(const std::vector<std::string>& queries_input, int responses_limit)
 {

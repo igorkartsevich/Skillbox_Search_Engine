@@ -9,7 +9,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable (Tests Tests.cpp)
+add_executable (Tests Tests.cpp Tests.h)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Tests PROPERTY CXX_STANDARD 20)

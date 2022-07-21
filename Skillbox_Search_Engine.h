@@ -2,6 +2,6 @@
 
 #include <iostream>
 
-#include "Src/ConverterJSON.h"
-#include "Src/InvertedIndex.h"
-#include "Src/SearchServer.h"
+#include "include/ConverterJSON.h"
+#include "include/InvertedIndex.h"
+#include "include/SearchServer.h"

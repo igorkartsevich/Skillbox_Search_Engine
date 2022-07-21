@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "SearchServer.h"
+#include "../include/SearchServer.h"
 
 // EXCEPTIONS
 class ConfigFileEmpty_Exception : public std::exception {

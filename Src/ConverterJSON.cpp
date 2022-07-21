@@ -4,7 +4,7 @@
 #include <mutex>
 
 #include "nlohmann/json.hpp"
-#include "ConverterJSON.h"
+#include "../include/ConverterJSON.h"
 #include "config.h"
 
 namespace version {
