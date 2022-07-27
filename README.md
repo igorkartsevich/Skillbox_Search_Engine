@@ -110,5 +110,5 @@
     * получает и подготавливает массив клиентских запросов,
     * используя экземпляр InvertedIndex формирует и возращает ранжированный массив релевантных документов.
 
-### `/Tests/...`
+### `/Tests...`
 В папке /Tests сформированы модульные тесты Tests.cpp, использован [Google Testing and Mocking Framework](https://github.com/google/googletest) с подключением по URL из GitHub.
